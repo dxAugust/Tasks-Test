@@ -1,0 +1,8 @@
+ul {
+    list-style: inside;
+}
+
+.groups {
+    display: flex;
+    flex-direction: row;
+}

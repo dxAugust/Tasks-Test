@@ -6,7 +6,7 @@ require("utils/includes.php");
 define("DB_HOST", "localhost");
 define("DB_USER", "root");
 define("DB_PASS", "");
-define("DB_NAME", "server");
+define("DB_NAME", "test_backend_rolburo");
 
 define("PROJECT_NAME", "Test Task");
 

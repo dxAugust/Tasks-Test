@@ -1,16 +1,15 @@
 <a href="?">Все товары</a>
 
-<div class="">
-    <ul>
-        <?php foreach($products_list as $element) { ?>
-            <li><a href="<?= $element["id_parent"] ?>"><?= $element["name"] ?></a></li>
-        <?php } ?>
-    </ul>
+<div class="groups">
+    <div>
+        <ul>
+            <?= $groupList ?>
+        </ul>
+    </div>
 
     <ul>
-        <?php foreach($products_list as $element) { ?>
-            <li><a href="<?= $element["id_parent"] ?>"><?= $element["name"] ?></a></li>
+        <?php foreach($productsList as $element) { ?>
+            <li><?= $element["name"] ?></li>
         <?php } ?>        
     </ul>
 </div>
-
