@@ -1,5 +1,9 @@
 import express from 'express';
+<<<<<<< HEAD
 import path from 'path';
+=======
+import path from 'node:path';
+>>>>>>> 88b1c8094f98f9bdec1a362aefcf2e89d7c89f79
  
 const app: express.Application = express();
 const port: number = 8080;
