@@ -1,0 +1,19 @@
+version: "3"
+services:
+  backend:
+    build: ./gf-backend
+    ports:
+      - "8080:8080"
+    depends_on:
+      - db
+    container_name: graff-backend
+  frontend:
+    build: ./gf-frontend
+    ports:
+      - "80:80"
+    container_name: graff-frontend
+  db:
+    image: mysql
+    ports:
+      - "27017:27017"
+    container_name: graff-db
