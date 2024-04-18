@@ -8,5 +8,7 @@ WORKDIR /usr/app
 COPY ./ /usr/app
 RUN npm install
 
+EXPOSE 80
+
 # Starting up the web server
 CMD ["npm", "start"]

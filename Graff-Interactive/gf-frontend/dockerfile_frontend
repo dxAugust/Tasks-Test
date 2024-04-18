@@ -10,3 +10,5 @@ RUN npm install
 
 # Building the frontend part
 CMD ["npm", "run", "build"]
+
+COPY ./dist /usr/frontend

@@ -1,23 +1,33 @@
 version: "3"
 services:
-  backend:
-    build: ./gf-backend
-    ports:
-      - "8080:8080"
-    depends_on:
-      - db
-    container_name: graff-backend
-<<<<<<< HEAD
   frontend:
-=======
-  webapp:
->>>>>>> 88b1c8094f98f9bdec1a362aefcf2e89d7c89f79
-    build: ./gf-frontend
+    build: 
+      context: "./gf-frontend"
+      dockerfile: dockerfile_frontend
+    container_name: graff-frontend
+    volumes:
+      - dist:/usr/frontend:rw
+    develop:
+      watch:
+        - path: ./
+
+  backend:
+    build: 
+      context: "./gf-backend"
+      dockerfile: dockerfile_backend
+    links:
+     - frontend
     ports:
       - "80:80"
-    container_name: graff-frontend
-  db:
-    image: mysql
-    ports:
-      - "27017:27017"
-    container_name: graff-db
+    depends_on:
+      - frontend
+    container_name: graff-backend
+    restart: always
+    volumes:
+      - dist:/usr/frontend:rw
+    develop:
+      watch:
+        - path: ./
+
+volumes:
+  dist: {}

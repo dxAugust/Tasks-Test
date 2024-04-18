@@ -16,17 +16,7 @@ function SiteChat(/* props?: SiteChatProps */)
             <div className="chat-input-block">
               <div className="chat-messages-list">
                 <ul>
-                  <li className="message self">
-                    <div className="profile-pic">ИФ</div>
-                    <div className="tail"></div>
-                    <div className="message-block">Информативное сообщение с просьбой, в две строки</div>
-                  </li>
-
-                  <li className="message">
-                    <div className="profile-pic">ИФ</div>
-                    <div className="tail"></div>
-                    <div className="message-block">Информативное сообщение с просьбой, в две строки</div>
-                  </li>
+                  
                 </ul>
               </div>
   
