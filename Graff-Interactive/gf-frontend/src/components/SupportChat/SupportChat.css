@@ -1,6 +1,6 @@
 .client-chat {
     height: 100%;
-    width: 20%;
+    width: 100%;
     background-color: var(--secondary-color-01);
 
     display: flex;
@@ -32,6 +32,10 @@
     background-color: var(--primary-color-01);
 }
 
+.chat-message-input input {
+    width: 100%;
+}
+
 .chat-message-input input::placeholder {
     font-size: 14px;
 }
@@ -56,54 +60,4 @@
 
 .chat-messages-list ul li {
     margin-bottom: 10px;
-}
-
-.message {
-    display: flex;
-    align-items: end;
-
-    margin-top: auto;
-}
-
-.message .tail {
-    width: 7px;
-    height: 12px;
-
-    background: var(--another-message);
-    transform: matrix(-1, 0, 0, 1, 0, 0);
-}
-
-.message.self .tail {
-    background: var(--self-message);
-}
-
-.message .message-block {
-    background-color: var(--another-message);
-    padding: 8px;
-
-    border-radius: 8px 8px 8px 0;
-}
-
-.message.self .message-block {
-    background-color: var(--self-message);
-}
-
-.message .profile-pic {
-    display: flex;
-    align-items: center;
-
-    font-weight: bold;
-
-    background-color: var(--another-message);
-    
-    width: 24px;
-    height: 24px;
-
-    padding: 5px;
-
-    border-radius: 50%;
-}
-
-.message.self .profile-pic {
-    background-color: var(--self-message);
 }

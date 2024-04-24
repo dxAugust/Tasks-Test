@@ -1,3 +1,4 @@
+import ChatMessage from "./ChatMessage/ChatMessage";
 import "./SupportChat.css";
 
 /*
@@ -16,7 +17,7 @@ function SiteChat(/* props?: SiteChatProps */)
             <div className="chat-input-block">
               <div className="chat-messages-list">
                 <ul>
-                  
+                  <ChatMessage username="TEST" message="adsasd" self={ true }></ChatMessage>
                 </ul>
               </div>
   

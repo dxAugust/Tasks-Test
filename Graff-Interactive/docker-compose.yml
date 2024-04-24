@@ -9,7 +9,7 @@ services:
       - dist:/usr/frontend:rw
     develop:
       watch:
-        - path: ./
+        - path: ./gf-frontend
 
   backend:
     build: 
@@ -27,7 +27,7 @@ services:
       - dist:/usr/frontend:rw
     develop:
       watch:
-        - path: ./
+        - path: ./gf-backend
 
 volumes:
   dist: {}

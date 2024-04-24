@@ -1,18 +1,20 @@
+import "./ChatMessage.css";
+
 interface ChatMessageProps {
     username: string,
     message: string,
-    class: string
+    self?: boolean
 }
 
 function ChatMessage(props: ChatMessageProps)
 {
-    props.class = "message " + props.class;
+    let className = self ? "message self" : "message";
 
     return (
         <>
-            <li className={ props.class }>
+            <li className={ className }>
                 <div className="profile-pic">{ props?.username }</div>
-                <div className="tail"></div>
+                
                 <div className="message-block">{ props?.message }</div>
             </li>
         </>
